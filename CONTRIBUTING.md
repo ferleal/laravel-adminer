@@ -4,6 +4,7 @@
 ### To update Adminer
 * Download new adminer file
 * Prefix `adm_` to `view()`, `cookie()` and `redirect()` functions. Preferably use your IDE to do it safely.
+* Change adminer.css path to `vendor/adminer/adminer.css`
 * Update adminer-with-plugins.php with the new adminer filename
 
 ### To add a plugin

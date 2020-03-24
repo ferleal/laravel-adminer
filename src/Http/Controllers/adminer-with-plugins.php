@@ -31,4 +31,4 @@ function adminer_object() {
 }
 
 // include original Adminer or Adminer Editor
-include  __DIR__."/../../../resources/adminer-4.7.3-en.php";
+include_once  __DIR__."/../../../resources/adminer-4.7.6-en.php";

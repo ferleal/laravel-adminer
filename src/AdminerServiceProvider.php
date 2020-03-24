@@ -9,9 +9,7 @@ class AdminerServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->publishes([
-            __DIR__ . '/../public' => public_path('vendor/Adminer'),
-        ], 'Adminer');
+        $this->registerPublishing();
     }
 
 
@@ -24,18 +22,9 @@ class AdminerServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../public/' => public_path('vendor/Adminer'),
+                __DIR__ . '/../public/' => public_path('vendor/adminer'),
             ], 'Adminer-assets');
         }
-    }
-
-
-
-    protected function publish()
-    {
-        $this->publishes([
-            __DIR__.'/../public' => public_path(),
-        ], 'public');
     }
 
 
