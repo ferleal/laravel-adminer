@@ -46,21 +46,21 @@ composer require ferleal/laravel-adminer
 
 To autologin Adminer with Laravel default connection:
 ```php
-Route::any('adminer', '\Ferleal\Adminer\AdminerAutologinController@index');
+Route::any('adminer', '\Ferleal\Adminer\Http\Controllers\AdminerController@auto');
 ```
 
 If you want to manually provide credentials on the UI instead:
 ```php
-Route::any('adminer', '\Ferleal\Adminer\AdminerController@index');
+Route::any('adminer', '\Ferleal\Adminer\Http\Controllers\AdminerController@index');
 ```
 
 if you want to use sqlite you can use is it like this, just watch out to leave it open I usualy only leave it for internal ip.
 ```php
-Route::any('adminer', '\Ferleal\Adminer\AdminerController@sqlite');
+Route::any('adminer', '\Ferleal\Adminer\Http\Controllers\AdminerController@sqlite');
 ```
 Of course, you can add any middleware of your choice to restrict usage:
 ```php
-Route::any('adminer', '\Ferleal\Adminer\AdminerController@auto')
+Route::any('adminer', '\Ferleal\Adminer\Http\Controllers\AdminerController@auto')
     ->middleware(['admin']);
 ```
 
